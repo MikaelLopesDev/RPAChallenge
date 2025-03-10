@@ -22,7 +22,8 @@ Antes de executar o projeto, certifique-se de ter os seguintes requisitos atendi
 
 3. **Adicionar Asset no Orchestrator**
    - Nome: `urlChallenge`
-   - Valor: URL do desafio RPA Challenge
+   - Value: URL do desafio RPA Challenge
+   - Folder: `Shared`
 
 4. **Variáveis Utilizadas**
    - `nameFileToSave`: Define o nome do arquivo onde os dados serão salvos (**valor padrão**: `challenge.xlsx`)
