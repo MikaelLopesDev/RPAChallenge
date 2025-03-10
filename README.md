@@ -35,8 +35,5 @@ Antes de executar o projeto, certifique-se de ter os seguintes requisitos atendi
 4. Execute o fluxo principal `Main.xaml`.
 5. Monitore os logs para verificar a execução e validação dos resultados.
 
-## Contato
-Caso tenha dúvidas ou precise de suporte, entre em contato pelo e-mail do responsável pelo projeto ou pelo canal interno da equipe.
-
 ---
 **Versão do Projeto:** 1.0.0  
