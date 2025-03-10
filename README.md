@@ -35,5 +35,9 @@ Antes de executar o projeto, certifique-se de ter os seguintes requisitos atendi
 4. Execute o fluxo principal `Main.xaml`.
 5. Monitore os logs para verificar a execução e validação dos resultados.
 
+
+## Resultado
+1. Arquivo que é feito o downloand do site está sendo salvo dentro da pasta data/temp
+2. A mensagem de resultado da execução foi: "Your success rate is 100% ( 70 out of 70 fields) in 99026 milliseconds" 
 ---
 **Versão do Projeto:** 1.0.0  
