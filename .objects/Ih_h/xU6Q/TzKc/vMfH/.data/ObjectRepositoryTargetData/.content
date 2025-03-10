@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="PFfYQA5Tl0mR0_qjqLKQvw" Reference="bFiAeR0PPUG-d6FT01Ec6g/vMfH7jd-4UW0IlyjScWSEg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="cc708c41-a859-45cd-818d-529821b49b03" CvElementArea="448, 318, 262, 36" CvType="InputBox" DesignTimeRectangle="596, 231, 398, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='FWOvx' tag='INPUT' aaname='Last Name' /&gt;" FuzzySelectorArgument="&lt;webctrl id='FWOvx' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='Last Name' /&gt;" Guid="63b27252-605a-4ed1-9910-c373ecb32dbb" ImageBase64="" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="cc708c41-a859-45cd-818d-529821b49b03" CvTextArea="451, 291, 65, 12" CvTextArgument="Last Name" CvType="Text" DesignTimeRectangle="596, 211, 63, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Last Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Last Name' tag='LABEL' type='' class='' check:innerText='Last Name' /&gt;" Guid="161b003e-ad99-4598-922b-4972ef65887f" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="3e3613c7ac5f1864e753d37c07812434.png" xmlns="">09sgPvqvoxUyQ5WXq4eF2ZQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

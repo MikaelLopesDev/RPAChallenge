@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yyixs_Trtkm7ESbO6L5nIQ" Reference="bFiAeR0PPUG-d6FT01Ec6g/RUXOcGNcnUOQO0NyJJqVpw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="cc708c41-a859-45cd-818d-529821b49b03" CvElementArea="725, 316, 261, 38" CvType="InputBox" DesignTimeRectangle="1016, 408, 398, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='Xg7B0' tag='INPUT' aaname='Phone Number' /&gt;" FuzzySelectorArgument="&lt;webctrl name='Xg7B0' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='Phone Number' /&gt;" Guid="75f9016f-3fff-4c4d-84df-cda57c6208bd" ImageBase64="" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="cc708c41-a859-45cd-818d-529821b49b03" CvTextArea="728, 291, 91, 12" CvTextArgument="Phone Number" CvType="Text" DesignTimeRectangle="1016, 388, 89, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' type='' class='' check:innerText='Phone Number' /&gt;" Guid="fb02aff2-655d-4be8-82b8-58bf095bf6f8" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="ea2c3af7de1d497a76eac27e8036bdcb.png" xmlns="">08-5HzfhOdU24bqzK3ZwR6Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

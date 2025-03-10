@@ -1,0 +1,247 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DownloandAndRetrieveData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_browserRpaChallenge" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="in_folderSaveFile" Type="InArgument(x:String)" />
+    <x:Property Name="in_nameFile" Type="InArgument(x:String)" />
+    <x:Property Name="out_dtDataChallenge" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <this:DownloandAndRetrieveData.in_nameFile>
+    <InArgument x:TypeArguments="x:String" />
+  </this:DownloandAndRetrieveData.in_nameFile>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>DownloandAndRetrieveData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DownloandAndRetrieveData" sap:VirtualizedContainerService.HintSize="1836,2173" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment DisplayName="Comment DownalondAndRetriveData" sap:VirtualizedContainerService.HintSize="1022,126" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Will downdload the file with the data in the websit and read the excel creating a dataTable" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Rpa Challenge - Google Chrome" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,362" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_browserRpaChallenge]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="487cc632-45cf-4476-ac93-d5774a9f0bb9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download Excel cloud_do…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="400,193" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="487cc632-45cf-4476-ac93-d5774a9f0bb9" Version="V4">
+            <uix:NClick.Target>
+              <uix:TargetAnchorable BrowserURL="rpachallenge.com" CVScreenId="cfacd2be-d3e1-4f66-b0d7-ad650a451c92" ContentHash="9EzbAF3z0UuBAfRbPZg04w" CvElementArea="14, 825, 460, 39" CvType="Button" DesignTimeRectangle="19, 827, 454, 36" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' type='' class=' col s12 m12 l12 btn waves-effect waves-light uiColorPrimary center' check:innerText='DOWNLOAD EXCEL&amp;#xA;cloud_download' /&gt;" Guid="502292df-56be-4a10-b4df-5b5b6e1d607f" InformativeScreenshot="85db8820809be84ab3b319a7e62999a4.png" Reference="bFiAeR0PPUG-d6FT01Ec6g/-x_SfcZ_jkWPASzuJn-Xhg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+            </uix:NClick.Target>
+            <uix:NClick.VerifyOptions>
+              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                <uix:VerifyExecutionOptions.Retry>
+                  <InArgument x:TypeArguments="x:Boolean" />
+                </uix:VerifyExecutionOptions.Retry>
+                <uix:VerifyExecutionOptions.Timeout>
+                  <InArgument x:TypeArguments="x:Double" />
+                </uix:VerifyExecutionOptions.Timeout>
+              </uix:VerifyExecutionOptions>
+            </uix:NClick.VerifyOptions>
+          </uix:NClick>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAScwAAEnMBjCK5BwAAAsJJREFUWEftlj9IclEYxq1NG4xAodyaRJDCTZCWtlAhSHBwEAeHxFy0qcXNpiAog4YQhwhERNFBglr8NwUODv5BBAXBwJQGK+LEOXDPd897vd4rt49v+X7wgvd9nvOe516996pC/xgVbCxDrVZDKpWKVKPRgLIsFAVQq9U0gMFggLIsFAXY3d2lAfb29qAsC0UBut0u2fzo6AhKslEUIBaLkQBKULTaaDQim80G20uxdIDX11dULBZRKpUiZ+9wOND9/T16enpC7+/v0C6JrACVSgUdHBzQH5xUud1u1Gw24Zi5LAzQ7/fRxsaGYAOuVldXBT1+4a9oNpvBsQyiAeLxuGBgIBBA5XIZWimPj4/I4/EI1uG+GHMDXF5eMgMuLi6gRZJwOCwrhCBAq9ViFn5+fkKLbHq9nuQsQQD+4xXSbrdROp2Gbcrd3R0aj8dMbzAY0HkWi4XRMMwuz8/P1JxIJPgSgdOy2SyUUDQaFQ0eiUSoNhqNGI1xO51O0SH48nHazc0NlFEwGBRdi+G009NTts8/WFlZIab9/X1+m/D19UWH3N7eQhmFQqGFAba2tohmMpmYPuMWS4n5+Pig+vX1NZTR8fHxwgBiV5ceDYdDari6umJMHJz+8vICJZRMJom2vr4OJcLJycniANVqlRrOz88ZE5/pdApbFHwSYni9Xjr/7e2N9mmAfD5PDZubm9TwW3CzcXU6nT997kOhUGBMdrudmpRiNpulA9TrdcbElc/nI+EmkwldJAW+1/EDy+VyCebh+v7+pt65d4FUra2tIb1eT/6I4tLpdMwTVKqYPfkHh4eHAvNv19nZGX9L4bsALvjNwlcOIgiAwZcULlZaOzs7cBvC3ACYTCaDtre3BYOWLfwGLJVKcDxFNACfh4cH5Pf7yTCNRiPYhCutVousVit5L+RyOThmLrIC/E3+B/gBD7ydkwql2HYAAAAASUVORK5CYII=" InformativeScreenshot="cc40d3ba214a9284b8931a21338f70f4.jpg" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Salvar como" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1378" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="11029289-6018-4bb1-bf90-258f78cfc02e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <ui:GetLastDownloadedFile File="{x:Null}" FileResource="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[in_folderSaveFile]" sap:VirtualizedContainerService.HintSize="988,1079" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_3">
+            <ui:GetLastDownloadedFile.Body>
+              <ActivityAction>
+                <uix:NCheckState DisplayName="Check App State 'Salvar como'" sap:VirtualizedContainerService.HintSize="954,823" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="11029289-6018-4bb1-bf90-258f78cfc02e" Timeout="60" Version="V4">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,566" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nome'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="11029289-6018-4bb1-bf90-258f78cfc02e" Text="[Path.Combine(in_folderSaveFile,  in_nameFile)]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="rpachallenge.com" CVScreenId="5624b548-99a4-4ef5-938c-04297c350560" ContentHash="d-PhiGL1MU264Ae4LpBZPQ" CvElementArea="136, 385, 808, 23" CvType="InputBox" DesignTimeRectangle="136, 389, 791, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nome:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nome:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="d1e4848f-9a30-4912-96ba-8cfed3b04312" InformativeScreenshot="d309b74e3bbd47964b5665ca9a351fd2.png" IsResponsive="True" Reference="bFiAeR0PPUG-d6FT01Ec6g/XneZq4c5bki6wzXn3XDgBA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Salvar como' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="5624b548-99a4-4ef5-938c-04297c350560" CvTextArea="91, 391, 37, 12" CvTextArgument="Nome:" CvType="Text" DesignTimeRectangle="18, 386, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;ctrl name='Painel do Explorer' role='pane' /&gt;&lt;ctrl name='Painel de Layout de Pastas' role='pane' /&gt;&lt;ctrl name='Painel de Detalhes' role='pane' /&gt;&lt;ctrl name='Nome:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;ctrl name='Painel do Explorer' role='pane' /&gt;&lt;ctrl name='Painel de Layout de Pastas' role='pane' /&gt;&lt;ctrl name='Painel de Detalhes' role='pane' /&gt;&lt;ctrl name='Nome:' role='text' automationid='' check:text='Nome:' /&gt;" Guid="b052d70c-5ccf-4dbc-a087-7d5a3abd8cf2" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sa&amp;lvar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="11029289-6018-4bb1-bf90-258f78cfc02e" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="rpachallenge.com" CVScreenId="5624b548-99a4-4ef5-938c-04297c350560" ContentHash="vggVI9V2t0KEBh5xVxePaQ" CvElementArea="747, 489, 89, 26" CvTextArea="774, 495, 33, 12" CvTextArgument="Salvar" CvType="Button" DesignTimeRectangle="747, 489, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='Sa&amp;amp;lvar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='Sa&amp;amp;lvar' check:text='Sa&amp;amp;lvar' /&gt;" Guid="23865322-2eae-4a66-b12b-be8912ef7637" InformativeScreenshot="8017b6887475172aba97d4628fe353c5.png" Reference="bFiAeR0PPUG-d6FT01Ec6g/LLTMHcl0e0-kN8RQEgLeKw" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Salvar como' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Throw DisplayName="Throw Window Save as did not appear" Exception="[New BusinessRuleException(&quot;Window Save as did not appear&quot;)]" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="" ContentHash="p_Wi1lRhqEGOcPTc-ofTiQ" DesignTimeRectangle="0, 0, 960, 540" DesignTimeScaleFactor="1" Guid="cfabfb2c-af01-4c50-a9ab-fa4270d63aab" InformativeScreenshot="bb823394f0cdcfc22f1491e319985a57.png" Reference="bFiAeR0PPUG-d6FT01Ec6g/8-acE_pJ7kmqKHcVPiEoBw" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Salvar como' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+                      <uix:TargetAnchorable.FuzzySelectorArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </uix:TargetAnchorable.FuzzySelectorArgument>
+                    </uix:TargetAnchorable>
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+              </ActivityAction>
+            </ui:GetLastDownloadedFile.Body>
+          </ui:GetLastDownloadedFile>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 960, 540" ContentHash="DS0gOikv-kSMKx44G1ZSwg" FilePath="C:\Program Files\Google\Chrome\Application\chrome.exe" IconBase64="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" InformativeScreenshot="176e284e8f0f9945a7c8662dd44ee28f.png" Reference="bFiAeR0PPUG-d6FT01Ec6g/DSZ-iUTgvk6tXyNWyKIH3g" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Salvar como' /&gt;" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message &quot;File Downloaded Successfully&quot;" sap:VirtualizedContainerService.HintSize="1022,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;File Downloaded Successfully&quot;]" />
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[out_dtDataChallenge]" DisplayName="Read Range Workbook challenge" sap:VirtualizedContainerService.HintSize="1022,111" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="[Path.Combine(in_folderSaveFile,  in_nameFile)]" />
+  </Sequence>
+</Activity>

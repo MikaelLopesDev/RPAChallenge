@@ -1,39 +1,41 @@
-### Documentation is included in the Documentation folder ###
+# RPAChallenge - UiPath
 
+## Descrição
+Este projeto UiPath foi desenvolvido para resolver o **RPA Challenge**, um desafio onde os seletores dos campos mudam dinamicamente a cada execução. O objetivo é automatizar o preenchimento correto dos campos, garantindo que a automação funcione independentemente das alterações dos seletores.
 
-### REFrameWork Template ###
-**Robotic Enterprise Framework**
+## Requisitos
+Antes de executar o projeto, certifique-se de ter os seguintes requisitos atendidos:
+- UiPath Studio **25.0.161.0** ou superior.
+- Orchestrator configurado com acesso à Cloud.
+- Dependências instaladas:
+  - `UiPath.Excel.Activities` (versão: **2.25.1-preview**)
+  - `UiPath.System.Activities` (versão: **25.2.1**)
+  - `UiPath.Testing.Activities` (versão: **24.10.4**)
+  - `UiPath.UIAutomation.Activities` (versão: **25.2.1-preview**)
 
-* Built on top of *Transactional Business Process* template
-* Uses *State Machine* layout for the phases of automation project
-* Offers high level logging, exception handling and recovery
-* Keeps external settings in *Config.xlsx* file and Orchestrator assets
-* Pulls credentials from Orchestrator assets and *Windows Credential Manager*
-* Gets transaction data from Orchestrator queue and updates back status
-* Takes screenshots in case of system exceptions
+## Configuração
+1. **Criar Fila no Orchestrator**
+   - Crie uma fila no **Orchestrator** com o mesmo nome configurado no arquivo de configuração do projeto.
 
+2. **Configurar a Pasta do Orchestrador**
+   - No arquivo de configuração do projeto, altere o caminho da pasta do **Orchestrador** para corresponder à sua pasta na UiPath Cloud.
 
-### How It Works ###
+3. **Adicionar Asset no Orchestrator**
+   - Nome: `urlChallenge`
+   - Valor: URL do desafio RPA Challenge
 
-1. **INITIALIZE PROCESS**
- + ./Framework/*InitiAllSettings* - Load configuration data from Config.xlsx file and from assets
- + ./Framework/*GetAppCredential* - Retrieve credentials from Orchestrator assets or local Windows Credential Manager
- + ./Framework/*InitiAllApplications* - Open and login to applications used throughout the process
+4. **Variáveis Utilizadas**
+   - `nameFileToSave`: Define o nome do arquivo onde os dados serão salvos (**valor padrão**: `challenge.xlsx`)
 
-2. **GET TRANSACTION DATA**
- + ./Framework/*GetTransactionData* - Fetches transactions from an Orchestrator queue defined by Config("OrchestratorQueueName") or any other configured data source
+## Como Executar
+1. Abra o **UiPath Studio** e carregue o projeto.
+2. Certifique-se de que todas as dependências estão instaladas.
+3. Verifique e ajuste as configurações no **Orchestrator** conforme descrito acima.
+4. Execute o fluxo principal `Main.xaml`.
+5. Monitore os logs para verificar a execução e validação dos resultados.
 
-3. **PROCESS TRANSACTION**
- + *Process* - Process trasaction and invoke other workflows related to the process being automated 
- + ./Framework/*SetTransactionStatus* - Updates the status of the processed transaction (Orchestrator transactions by default): Success, Business Rule Exception or System Exception
+## Contato
+Caso tenha dúvidas ou precise de suporte, entre em contato pelo e-mail do responsável pelo projeto ou pelo canal interno da equipe.
 
-4. **END PROCESS**
- + ./Framework/*CloseAllApplications* - Logs out and closes applications used throughout the process
-
-
-### For New Project ###
-
-1. Check the Config.xlsx file and add/customize any required fields and values
-2. Implement InitiAllApplications.xaml and CloseAllApplicatoins.xaml workflows, linking them in the Config.xlsx fields
-3. Implement GetTransactionData.xaml and SetTransactionStatus.xaml according to the transaction type being used (Orchestrator queues by default)
-4. Implement Process.xaml workflow and invoke other workflows related to the process being automated
+---
+**Versão do Projeto:** 1.0.0  

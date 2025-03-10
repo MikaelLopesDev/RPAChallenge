@@ -1,0 +1,17 @@
+﻿{
+  "Name": "MessageEndChallenge",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "xlZ0WEPVFUuzVBO_K9HQgw",
+  "Reference": "bFiAeR0PPUG-d6FT01Ec6g/xlZ0WEPVFUuzVBO_K9HQgw",
+  "ParentRef": "bFiAeR0PPUG-d6FT01Ec6g/qM0Fivv0f0uhZhQTHafEPA",
+  "Created": "2025-03-10T22:01:34.7047157Z",
+  "Updated": "2025-03-10T22:01:46.2468464Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

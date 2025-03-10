@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="D2uwlWO7yUmY0-KBfxCb1g" Reference="bFiAeR0PPUG-d6FT01Ec6g/1pgZJ8MkgEadNqQXTPBwLw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="74f525e8-c044-4b1b-990a-8874f97cf227" CvElementArea="726, 404, 260, 40" CvType="InputBox" DesignTimeRectangle="596, 496, 398, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='E60Rs' tag='INPUT' aaname='Address' /&gt;" FuzzySelectorArgument="&lt;webctrl name='E60Rs' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='Address' /&gt;" Guid="d8e964bf-8712-4135-93d5-b6ffc592bb29" ImageBase64="" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="74f525e8-c044-4b1b-990a-8874f97cf227" CvTextArea="727, 379, 50, 12" CvTextArgument="Address" CvType="Text" DesignTimeRectangle="596, 477, 48, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' type='' class='' check:innerText='Address' /&gt;" Guid="c5c58cca-01c2-40f1-8cd9-be00eb080fa6" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f24217a4861a0a4a103538ac5c009604.png" xmlns="">0wEFPROT0yU-bAR4O0_yqIw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

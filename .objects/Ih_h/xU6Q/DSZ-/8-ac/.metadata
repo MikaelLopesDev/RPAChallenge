@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Salvar como",
+  "Type": "Element",
+  "Id": "8-acE_pJ7kmqKHcVPiEoBw",
+  "Reference": "bFiAeR0PPUG-d6FT01Ec6g/8-acE_pJ7kmqKHcVPiEoBw",
+  "ParentRef": "bFiAeR0PPUG-d6FT01Ec6g/DSZ-iUTgvk6tXyNWyKIH3g",
+  "Created": "2025-03-10T20:52:42.6982927Z",
+  "Updated": "2025-03-10T20:52:42.6982927Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

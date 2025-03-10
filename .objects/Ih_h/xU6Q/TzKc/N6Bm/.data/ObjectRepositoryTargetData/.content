@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4TKJY48SBk2h_C2DlR0uKA" Reference="bFiAeR0PPUG-d6FT01Ec6g/N6BmyB9t8Uyf0NYtv6kttg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="cc708c41-a859-45cd-818d-529821b49b03" CvElementArea="448, 408, 261, 36" CvType="InputBox" DesignTimeRectangle="1016, 319, 398, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='WOMDv' tag='INPUT' aaname='First Name' /&gt;" FuzzySelectorArgument="&lt;webctrl id='WOMDv' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='First Name' /&gt;" Guid="a03293c2-3ace-48ec-9e6c-dac6949363f8" ImageBase64="" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="cc708c41-a859-45cd-818d-529821b49b03" CvTextArea="451, 379, 65, 12" CvTextArgument="First Name" CvType="Text" DesignTimeRectangle="1016, 300, 64, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='First Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='First Name' tag='LABEL' type='' class='' check:innerText='First Name' /&gt;" Guid="3a780f7f-5b71-4c54-aafd-e6e482eb4fb7" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f314c1779966b488b4ba75224465e0b8.png" xmlns="">0ZViFUluo2EOVUHNhVvZcrw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

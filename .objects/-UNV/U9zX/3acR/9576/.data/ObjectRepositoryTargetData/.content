@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="lFNzxlXmrk6qNILYcAb3og" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="7e64b0ff-46c1-4435-bcde-cd9a311c83bd" CvElementArea="17, 642, 316, 58" CvTextArea="143, 663, 65, 14" CvTextArgument="ROUND 1" CvType="Button" DesignTimeRectangle="19, 644, 314, 54" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='col s12 m12 l12 btn-large uiColorButton' aaname='Round 1' check:innerText='ROUND 1' /&gt;" Guid="ca52f6e7-bf7a-4bf1-9dbd-911863e3451a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1dd2f78eda9085ba26eebb24884ee03a.png" xmlns="">0iNzMqT3IsUib5hL6FMsX5w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
